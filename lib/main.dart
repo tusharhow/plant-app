@@ -85,6 +85,28 @@ class HomePage extends StatelessWidget {
                           color: Colors.black54,
                           fontSize: 28),
                     ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Row(
+                      children: [
+                        MenuItem(
+                          menu: 'Bonsai',
+                        ),
+                        MenuItem(
+                          menu: 'Desk Tree',
+                        ),
+                        MenuItem(
+                          menu: 'Trees',
+                        ),
+                        MenuItem(
+                          menu: 'Flowers',
+                        ),
+                        MenuItem(
+                          menu: 'Apple Tree',
+                        ),
+                      ],
+                    )
                   ],
                 ),
               ),
@@ -115,6 +137,31 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class MenuItem extends StatelessWidget {
+  const MenuItem({
+    Key key,
+    @required this.menu,
+  }) : super(key: key);
+  final menu;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            menu,
+            style: TextStyle(
+              fontWeight: FontWeight.normal,
+              color: Colors.black87,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
